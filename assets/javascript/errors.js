@@ -1,4 +1,5 @@
 
+
 var searchButton = document.getElementById("searchButton");
 
 var cityinput = document.querySelector("#city-search");
@@ -16,12 +17,14 @@ searchButton.addEventListener("click", function(){
 });
 
 var fetchWeather = function(city) {
+
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=eda4403bd9c90cb2bfa5115b8964ea2f&units=imperial").then(function(response){
     if (response.ok) {
         response.json().then(function(data){
         // displayWeather(data);
         console.log(data);
         currentDisplay(data);
+        uvi();
 
         var savedCities = localStorage.getItem("cities")
         savedCities = savedCities ? savedCities.split(',') : [];
@@ -62,46 +65,34 @@ var currentDisplay = function(data) {
 
     
 };
-
+var uviColor = document.getElementById("uvchange");
 var uvi = function(lon, lat) {
-   
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely&appid=eda4403bd9c90cb2bfa5115b8964ea2f&units=imperial").then(function(response) {
+    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely&appid=eda4403bd9c90cb2bfa5115b8964ea2f").then(function(response) {
     if (response.ok) {
     response.json().then(function(datab){
         console.log(datab)
         var uvidisplay = datab['current']['uvi'];
         uvIndex.innerText = "UV Index: " +uvidisplay;
-        setFiveDay(datab);
+    //  uvColorChange(uvidisplay);
     });
     }else {
         console.log("error retrieving");
     };
         });
 }; 
+// fix - bug - try to remove class list during each if statement
+// uvColorChange = function (uvidisplay) {
+//     if (uvidisplay < 3) {
+//         uviColor.classList.add('change-green');
+//     }; if (uvidisplay >= 3 && uvidisplay < 6) {
+//         uviColor.classList.add('change-yellow')
+//     }; if (uvidisplay > 6) {
+//         uviColor.classList.add('change-red')
+//     };
+    
+// };
 
 
-
- var setFiveDay = function(datab){ 
-    dateonearea = document.getElementById("date1");
-    datetwoarea = document.getElementById("date2");
-    datethreearea = document.getElementById("date3");
-    datefourarea = document.getElementById("date4");
-    datefivearea = document.getElementById("date5");
-
-    var dayplusone = moment().add(1, 'day').format("dddd, MMMM Do YYYY");
-    dateonearea.innerText = dayplusone;
-    var dayplustwo = moment().add(2, 'day').format("dddd, MMMM Do YYYY");
-    datetwoarea.innerText = dayplustwo;
-    var dayplusthree = moment().add(3, 'day').format("dddd, MMMM Do YYYY");
-    datethreearea.innerText = dayplusthree;
-    var dayplusfour = moment().add(4, 'day').format("dddd, MMMM Do YYYY");
-    datefourarea.innerText = dayplusfour;
-    var dayplusfive = moment().add(5, 'day').format("dddd, MMMM Do YYYY");
-    datefivearea.innerText = dayplusfive;
-
-
-
- };
 
 var loadCities = function() {
 
