@@ -34,6 +34,8 @@ var daythreeIcon = document.querySelector("#weatherIcon3");
 var dayfourIcon = document.querySelector("#weatherIcon4");
 var dayfiveIcon = document.querySelector("#weatherIcon5");
 
+var currentDisplayA = document.getElementById('currentDisplayArea');
+
 searchButton.addEventListener("click", function(){
     fetchWeather(cityinput.value);
 });
@@ -90,6 +92,8 @@ var uvi = function(lon, lat) {
     if (response.ok) {
     response.json().then(function(datab){
         console.log(datab)
+        currentDisplayA.classList.remove('displaynone');
+
         var uvidisplay = datab['current']['uvi'];
         uvIndex.innerText = "UV Index: " +uvidisplay;
         setFiveDay(datab);

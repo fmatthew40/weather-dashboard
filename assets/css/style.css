@@ -25,7 +25,7 @@ font-family: serif;
     font-family:fantasy;
     font-size: larger;
     padding: 12px 0 0 0; 
-    text-shadow: 2px 2px rgb(105, 105, 105);
+    text-shadow: 1px 1px rgb(105, 105, 105);
 
 }
 
@@ -35,6 +35,10 @@ font-family: serif;
     background-color: rgb(100, 178, 175);
     border-radius: 10px;
     box-shadow: 8px 8px 4px 3px rgb(105, 105, 105);
+}
+
+.displaynone {
+    display:none
 }
 
 .search h2{
@@ -83,6 +87,7 @@ font-family: serif;
    margin: auto;
    margin-right: -14px; 
    text-align: center;
+   /* margin-top: 35px;  */
 }
 
 .current-box {
@@ -102,7 +107,72 @@ font-family: serif;
 }
 
 .uv {
-    width: 30%;
+    width: 40%;
     margin: auto; 
     border-radius: 10px;
+}
+
+/* 5-day Forecast */
+
+.titlefive {
+    text-align: center; 
+    text-shadow: 1px 1px rgb(105, 105, 105);
+    
+}
+
+.one {
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+    width: fit-content;
+}
+
+.one img {
+    width: 25%;
+    height: 20%;
+}
+
+.two {
+    margin-right: auto; 
+    margin-left: auto;
+    box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+    width: fit-content;
+}
+
+.two img {
+    width: 25%;
+    height: 20%; 
+}
+
+.three {
+    margin-right: auto; 
+    margin-left: auto; 
+    box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+}
+
+.three img {
+    width: 25%;
+    height: 20%; 
+}
+
+.four{
+    margin-right: auto;
+    margin-left: auto;  
+    box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+}
+
+.four img {
+    width: 25%;
+    height: 20%; 
+}
+
+.five {
+    margin-right: auto; 
+    margin-left: auto; 
+    box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+}
+
+.five img {
+    width: 25%;
+    height: 20%; 
 }
