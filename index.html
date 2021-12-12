@@ -15,16 +15,20 @@
 </head>
 <body>
     <header class="box h1 alert alert-info border border-info">
-    <div class="text-center" >Weather Dashboard</div>
+    <div class="title-area text-center" >Weather Dashboard</div>
     </header>
 
     <section> 
         <!--Search for City box-->
+      
         <div class="row">
             <div class="col-2 border border-secondary">
                 <h2>Search for a City:</h2>
                 <input name="city" id="city-search" type="text" autofocus="true" class="">
                 <button id="searchButton">Search</button>
+                <div class="border border-secondary">
+                <div id="search-results" class="col-2"></div>
+            </div>
              </div>   
 
         <!--box for current weeather-->
@@ -47,24 +51,20 @@
 
    <!-- Next Section -->
 
-   <section class="card border border-secondary">
+   <!-- <section class="card border border-secondary">
        <div class="row">
 
-        <div class = "col-2 border border-secondary">
-            <div id="search-results" class="col-2">
-            
-                
-            <!-- </div>
-            <button id="clearHistory">Clear Search History</button>
-            </div> -->
+        <div class = "col-2 border border-secondary"> -->
+            <!-- <div id="search-results" class="col-2">
         </div>
-    </section>
+        </div>
+    </section> --> 
      
      
             <!--5 Day Weather Forecast -->
            
-        <section>
-             <div class="">
+        <section class="container">
+             <div class="row">
                 <h3 class="col-12">5 Day Forecast:</h3>
                 <!-- Day 1 -->
                 <div class="card col-2 border card border-secondary mb-3">
@@ -106,8 +106,11 @@
                     <h4 id="windspeed5">Wind Speed</h4>
                     <h4 id="humidity5">Humidity</h4>
                 </div>
-     
-             </div>
+    
+
+                
+            </div>
+
 
        </div>
    </section>

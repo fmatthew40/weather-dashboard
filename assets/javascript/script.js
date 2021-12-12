@@ -134,15 +134,15 @@ var uvi = function(lon, lat) {
     var temperatureDisplayFive =  "Temperature: " + datab['daily']['4']['temp']['day'] +"°F";
     temperatureFive.innerText = temperatureDisplayFive;
     //  Wind Speed for 5 day
-    var windDisplayOne =  "Wind Speed: " + datab['daily']['0']['wind_speed'] +"mph";
+    var windDisplayOne =  "Wind Speed: " + datab['daily']['0']['wind_speed'] +" mph";
     windspeedOne.innerText = windDisplayOne;
-    var windDisplayTwo =  "Wind Speed: " + datab['daily']['1']['wind_speed'] +"mph";
+    var windDisplayTwo =  "Wind Speed: " + datab['daily']['1']['wind_speed'] +" mph";
     windspeedTwo.innerText = windDisplayTwo;
-    var windDisplayThree =  "Wind Speed: " + datab['daily']['2']['wind_speed'] +"mph";
+    var windDisplayThree =  "Wind Speed: " + datab['daily']['2']['wind_speed'] +" mph";
     windspeedThree.innerText = windDisplayThree;
-    var windDisplayFour =  "Wind Speed: " + datab['daily']['3']['wind_speed'] +"mph";
+    var windDisplayFour =  "Wind Speed: " + datab['daily']['3']['wind_speed'] +" mph";
     windspeedFour.innerText = windDisplayFour;
-    var windDisplayFive =  "Wind Speed: " + datab['daily']['4']['wind_speed'] +"mph";
+    var windDisplayFive =  "Wind Speed: " + datab['daily']['4']['wind_speed'] +" mph";
     windspeedFive.innerText = windDisplayFive;
     //  Humidity for 5 day
     var humidityOneDisplay =  "Humidity: " + datab['daily']['0']['humidity'] +"%";
