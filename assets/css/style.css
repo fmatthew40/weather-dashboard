@@ -26,7 +26,6 @@ font-family: serif;
     font-size: larger;
     padding: 12px 0 0 0; 
     text-shadow: 1px 1px rgb(105, 105, 105);
-
 }
 
 /* Search Area */
@@ -102,7 +101,7 @@ font-family: serif;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 12%;
+    width: 18%;
     height: 12%;
 }
 
@@ -125,11 +124,18 @@ font-family: serif;
     margin-left: auto;
     box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
     width: fit-content;
+    background-color: rgb(203, 237, 248);
+}
+
+.one h4 {
+    text-align: center; 
 }
 
 .one img {
-    width: 25%;
-    height: 20%;
+    width: 23%;
+    height: 22%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .two {
@@ -137,42 +143,70 @@ font-family: serif;
     margin-left: auto;
     box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
     width: fit-content;
+    background-color: rgb(203, 237, 248);
+}
+
+.two h4 {
+    text-align: center; 
 }
 
 .two img {
-    width: 25%;
-    height: 20%; 
+    width: 23%;
+    height: 22%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .three {
     margin-right: auto; 
     margin-left: auto; 
     box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+    background-color: rgb(203, 237, 248);
+}
+
+.three h4 {
+    text-align: center; 
 }
 
 .three img {
-    width: 25%;
-    height: 20%; 
+    width: 23%;
+    height: 22%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .four{
     margin-right: auto;
     margin-left: auto;  
     box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+    background-color: rgb(203, 237, 248);
+}
+
+.four h4 {
+    text-align: center; 
 }
 
 .four img {
-    width: 25%;
-    height: 20%; 
+    width: 23%;
+    height: 22%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .five {
     margin-right: auto; 
     margin-left: auto; 
     box-shadow: 4px 4px 4px 4px rgb(105, 105, 105);
+    background-color: rgb(203, 237, 248);
+}
+
+.five h4 {
+    text-align: center; 
 }
 
 .five img {
-    width: 25%;
-    height: 20%; 
+    width: 23%;
+    height: 22%; 
+    margin-left: auto;
+    margin-right: auto;
 }

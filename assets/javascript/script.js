@@ -36,6 +36,13 @@ var dayfiveIcon = document.querySelector("#weatherIcon5");
 
 var currentDisplayA = document.getElementById('currentDisplayArea');
 
+var titlefive = document.querySelector('.titlefive');
+var one = document.querySelector('.one');
+var two = document.querySelector('.two');
+var three = document.querySelector('.three');
+var four = document.querySelector('.four');
+var five = document.querySelector('.five');
+
 searchButton.addEventListener("click", function(){
     fetchWeather(cityinput.value);
 });
@@ -93,6 +100,7 @@ var uvi = function(lon, lat) {
     response.json().then(function(datab){
         console.log(datab)
         currentDisplayA.classList.remove('displaynone');
+        classes();
 
         var uvidisplay = datab['current']['uvi'];
         uvIndex.innerText = "UV Index: " +uvidisplay;
@@ -241,5 +249,14 @@ var loadCities = function() {
 
     }
 };
+
+var classes = function(){
+    titlefive.classList.remove('displaynone');
+    one.classList.remove('displaynone');
+    two.classList.remove('displaynone');
+    three.classList.remove('displaynone');
+    four.classList.remove('displaynone');
+    five.classList.remove('displaynone');
+}
 
 loadCities()
