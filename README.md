@@ -9,7 +9,7 @@
  - JavaScript
 
 # Screenshot
-
+![weather](https://user-images.githubusercontent.com/93060262/145734331-0c7a4bc6-e7af-4fca-83cb-bea80519d53d.png)
 
 # Link to Application:
 https://fmatthew40.github.io/weather-dashboard/
