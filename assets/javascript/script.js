@@ -232,6 +232,9 @@ var loadCities = function() {
             fetchWeather(event.target.innerText);
         });
         searchResultsArea.appendChild(searchButton);
+        searchButton.classList.add('newbuttons');
+
+
     }
 };
 

@@ -1,3 +1,9 @@
+/* Global */
+* {
+font-family: serif;
+}
+/* classes for UV Index  */
+
 .lowgreen {
     background-color: rgb(114, 206, 114);
 }
@@ -12,4 +18,91 @@
 }
 .extreme-purple {
     background-color: rgb(95, 55, 238);
+}
+
+/* header  */
+.title-area {
+    font-family:fantasy;
+    font-size: larger;
+    padding: 12px 0 0 0; 
+    text-shadow: 2px 2px rgb(105, 105, 105);
+
+}
+
+/* Search Area */
+
+.search {
+    background-color: rgb(100, 178, 175);
+    border-radius: 10px;
+    box-shadow: 8px 8px 4px 3px rgb(105, 105, 105);
+}
+
+.search h2{
+    text-align: center;
+}
+
+#city-search {
+    width: 80%;    
+    margin: auto;
+    display: grid;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+#searchButton {
+    margin: auto;
+    display: grid; 
+    margin-top: 8px; 
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+#search-results {
+    padding-top: 25px;
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+.searchcontainer {
+    margin-left: 5%; 
+}
+
+.newbuttons {
+    background-color: lightblue;
+    margin-top: 2px; 
+    margin-bottom: 2px; 
+    border-radius: 10px;
+}
+
+/* Current Weather Display */
+
+.current {
+   width: 70%;
+   margin: auto;
+   margin-right: -14px; 
+   text-align: center;
+}
+
+.current-box {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: rgb(100, 178, 175);
+    border-radius: 10px;
+    box-shadow: 8px 8px 4px 3px rgb(105, 105, 105);
+}
+
+#weatherIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+    height: 12%;
+}
+
+.uv {
+    width: 30%;
+    margin: auto; 
+    border-radius: 10px;
 }

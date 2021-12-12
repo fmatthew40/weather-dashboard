@@ -21,18 +21,19 @@
     <section> 
         <!--Search for City box-->
       
-        <div class="row">
-            <div class="col-2 border border-secondary">
+        <div class="row searchcontainer">
+            <div class="search col-3 border border-secondary">
                 <h2>Search for a City:</h2>
                 <input name="city" id="city-search" type="text" autofocus="true" class="">
                 <button id="searchButton">Search</button>
-                <div class="border border-secondary">
+                <div class="">
                 <div id="search-results" class="col-2"></div>
             </div>
              </div>   
 
         <!--box for current weeather-->
-        <div class="col-10 border border-secondary">
+        <div class="current">
+            <div class="current-box card col-9 border border-secondary card">
             <h3 id="cityName">City Name</h3>
             <img id="weatherIcon" src="">
             <h3 id="date">Date</h3>
@@ -40,9 +41,10 @@
             <h3 id="temperature">Temperature</h3>
             <h3 id="humidity">Humidity</h3>
             <h3 id="windSpeed">Wind Speed</h3>
-            <div class="border border-secondary" id="uvchange">
+            <div class="uv border border-secondary" id="uvchange">
             <h3 id="uvIndex">UV Index</h3>
             </div>
+        </div>
             
         </div>
 
