@@ -45,7 +45,7 @@ font-family: serif;
 }
 
 #city-search {
-    width: 80%;    
+    width: 99%;    
     margin: auto;
     display: grid;
     border-radius: 10px;
@@ -70,6 +70,9 @@ font-family: serif;
 
 .searchcontainer {
     margin-left: 5%; 
+    margin-right: 5%; 
+    margin-top: auto;
+    margin-bottom: auto; 
 }
 
 .newbuttons {
