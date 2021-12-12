@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 
@@ -44,72 +46,72 @@
         </div>
     </section>
 
-<!--Next Section-->
-<section>
-         <!--Search Results for 5 day forecast-->
-         <div class="row">
+   <!-- Next Section -->
 
-        <!--Results from the City Search/Saved City Names -->
+   <section class="card border border-secondary">
+       <div class="row">
+
         <div class = "col-2 border border-secondary">
-        <div id="search-results" class="col-2">
-        
+            <div id="search-results" class="col-2">
             
+                
+            <!-- </div>
+            <button id="clearHistory">Clear Search History</button>
+            </div> -->
         </div>
-        <button>Clear Search History</button>
-        </div>
+    </section>
+     
+     
+            <!--5 Day Weather Forecast -->
+           
+        <section>
+             <div class="">
+                <h3 class="col-12">5 Day Forecast:</h3>
+                <!-- Day 1 -->
+                <div class="card col-2 border card border-secondary mb-3">
+                    <h4 id="date1">Date</h4>
+                    <img id="weatherIcon1" src="">
+                    <h4 id="temperature1">Temperature</h4>
+                    <h4 id="windspeed1">Wind Speed</h4>
+                    <h4 id="humidity1">Humidity</h4>
+                </div>
+                <!-- Day 2 -->
+                <div class="card col-2 border card border-secondary mb-3">
+                    <h4 id="date2">Date</h4>
+                    <img id="weatherIcon2" src="">
+                    <h4 id="temperature2">Temperature</h4>
+                    <h4 id="windspeed2">Wind Speed</h4>
+                    <h4 id="humidity2">Humidity</h4>
+                </div>
+                <!-- Day 3 -->
+                <div class="card col-2 border card border-secondary mb-3">
+                    <h4 id="date3">Date</h4>
+                    <img id="weatherIcon3" src="">
+                    <h4 id="temperature3">Temperature</h4>
+                    <h4 id="windspeed3">Wind Speed</h4>
+                    <h4 id="humidity3">Humidity</h4>
+                </div>
+                <!-- Day 4 -->
+                <div class="card col-2 border card border-secondary mb-3">
+                    <h4 id="date4">Date</h4>
+                    <img id="weatherIcon4" src="">
+                    <h4 id="temperature4">Temperature</h4>
+                    <h4 id="windspeed4">Wind Speed</h4>
+                    <h4 id="humidity4">Humidity</h4>
+                </div>
+                <!-- Day 5 -->
+                <div class="card col-2 border card border-secondary mb-3">
+                    <h4 id="date5">Date</h4>
+                    <img id="weatherIcon5" src="">
+                    <h4 id="temperature5">Temperature</h4>
+                    <h4 id="windspeed5">Wind Speed</h4>
+                    <h4 id="humidity5">Humidity</h4>
+                </div>
+     
+             </div>
 
-
-
-        <!--5 Day Weather Forecast -->
-       
-
-         <div class="card-deck">
-            <h3 class="col-12">5 Day Forecast:</h3>
-            <!-- Day 1 -->
-            <div class="col-2 border card border-secondary mb-3">
-                <h4 id="date1">Date</h4>
-                <img id="weatherIcon1" src="">
-                <h4 id="temperature1">Temperature</h4>
-                <h4 id="windspeed1">Wind Speed</h4>
-                <h4 id="humidity1">Humidity</h4>
-            </div>
-            <!-- Day 2 -->
-            <div class="col-2 border card border-secondary mb-3">
-                <h4 id="date2">Date</h4>
-                <img id="weatherIcon2" src="">
-                <h4 id="temperature2">Temperature</h4>
-                <h4 id="windspeed2">Wind Speed</h4>
-                <h4 id="humidity2">Humidity</h4>
-            </div>
-            <!-- Day 3 -->
-            <div class="col-2 border card border-secondary mb-3">
-                <h4 id="date3">Date</h4>
-                <img id="weatherIcon3" src="">
-                <h4 id="temperature3">Temperature</h4>
-                <h4 id="windspeed3">Wind Speed</h4>
-                <h4 id="humidity3">Humidity</h4>
-            </div>
-            <!-- Day 4 -->
-            <div class="col-2 border card border-secondary mb-3">
-                <h4 id="date4">Date</h4>
-                <img id="weatherIcon4" src="">
-                <h4 id="temperature4">Temperature</h4>
-                <h4 id="windspeed4">Wind Speed</h4>
-                <h4 id="humidity4">Humidity</h4>
-            </div>
-            <!-- Day 5 -->
-            <div class="col-2 border card border-secondary mb-3">
-                <h4 id="date5">Date</h4>
-                <img id="weatherIcon5" src="">
-                <h4 id="temperature5">Temperature</h4>
-                <h4 id="windspeed5">Wind Speed</h4>
-                <h4 id="humidity5">Humidity</h4>
-            </div>
-
-         </div>
-
-         </div>
-    </section>  
+       </div>
+   </section>
 
 
 

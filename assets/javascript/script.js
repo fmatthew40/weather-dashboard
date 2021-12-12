@@ -1,6 +1,4 @@
-
 var searchButton = document.getElementById("searchButton");
-
 var cityinput = document.querySelector("#city-search");
 // Current City Display Variables
 var cityName = document.querySelector("#cityName");
@@ -10,6 +8,30 @@ var temperature = document.querySelector("#temperature");
 var humidity = document.querySelector("#humidity");
 var windSpeed = document.querySelector("#windSpeed");
 var uvIndex = document.querySelector("#uvIndex");
+// five day display variables
+var temperatureOne = document.querySelector("#temperature1");
+var temperatureTwo = document.querySelector("#temperature2");
+var temperatureThree = document.querySelector("#temperature3");
+var temperatureFour = document.querySelector("#temperature4");
+var temperatureFive = document.querySelector("#temperature5");
+
+var humidityOne = document.querySelector("#humidity1");
+var humidityTwo = document.querySelector("#humidity2");
+var humidityThree = document.querySelector("#humidity3");
+var humidityFour = document.querySelector("#humidity4");
+var humidityFive = document.querySelector("#humidity5");
+
+var windspeedOne = document.querySelector("#windspeed1");
+var windspeedTwo = document.querySelector("#windspeed2");
+var windspeedThree = document.querySelector("#windspeed3");
+var windspeedFour = document.querySelector("#windspeed4");
+var windspeedFive = document.querySelector("#windspeed5");
+
+var dayoneIcon = document.querySelector("#weatherIcon1");
+var daytwoIcon = document.querySelector("#weatherIcon2");
+var daythreeIcon = document.querySelector("#weatherIcon3");
+var dayfourIcon = document.querySelector("#weatherIcon4");
+var dayfiveIcon = document.querySelector("#weatherIcon5");
 
 searchButton.addEventListener("click", function(){
     fetchWeather(cityinput.value);
@@ -72,6 +94,8 @@ var uvi = function(lon, lat) {
         var uvidisplay = datab['current']['uvi'];
         uvIndex.innerText = "UV Index: " +uvidisplay;
         setFiveDay(datab);
+        showFiveDay(datab);
+
     });
     }else {
         console.log("error retrieving");
@@ -98,10 +122,58 @@ var uvi = function(lon, lat) {
     datefourarea.innerText = dayplusfour;
     var dayplusfive = moment().add(5, 'day').format("dddd, MMMM Do YYYY");
     datefivearea.innerText = dayplusfive;
-
-
-
  };
+
+ var showFiveDay = function(datab) {
+    // temperatures for 5 day
+    var temperatureDisplayOne =  "Temperature: " + datab['daily']['0']['temp']['day'] +"°F";
+    temperatureOne.innerText = temperatureDisplayOne;
+    var temperatureDisplayTwo =  "Temperature: " + datab['daily']['1']['temp']['day'] +"°F";
+    temperatureTwo.innerText = temperatureDisplayTwo;
+    var temperatureDisplayThree =  "Temperature: " + datab['daily']['2']['temp']['day'] +"°F";
+    temperatureThree.innerText = temperatureDisplayThree;
+    var temperatureDisplayFour =  "Temperature: " + datab['daily']['3']['temp']['day'] +"°F";
+    temperatureFour.innerText = temperatureDisplayFour;
+    var temperatureDisplayFive =  "Temperature: " + datab['daily']['4']['temp']['day'] +"°F";
+    temperatureFive.innerText = temperatureDisplayFive;
+    //  Wind Speed for 5 day
+    var windDisplayOne =  "Wind Speed: " + datab['daily']['0']['wind_speed'] +"mph";
+    windspeedOne.innerText = windDisplayOne;
+    var windDisplayTwo =  "Wind Speed: " + datab['daily']['1']['wind_speed'] +"mph";
+    windspeedTwo.innerText = windDisplayTwo;
+    var windDisplayThree =  "Wind Speed: " + datab['daily']['2']['wind_speed'] +"mph";
+    windspeedThree.innerText = windDisplayThree;
+    var windDisplayFour =  "Wind Speed: " + datab['daily']['3']['wind_speed'] +"mph";
+    windspeedFour.innerText = windDisplayFour;
+    var windDisplayFive =  "Wind Speed: " + datab['daily']['4']['wind_speed'] +"mph";
+    windspeedFive.innerText = windDisplayFive;
+    //  Humidity for 5 day
+    var humidityOneDisplay =  "Humidity: " + datab['daily']['0']['humidity'] +"%";
+    humidityOne.innerText = humidityOneDisplay;
+    var humidityTwoDisplay =  "Humidity: " + datab['daily']['1']['humidity'] +"%";
+    humidityTwo.innerText = humidityTwoDisplay;
+    var humidityThreeDisplay =  "Humidity: " + datab['daily']['2']['humidity'] +"%";
+    humidityThree.innerText = humidityThreeDisplay;
+    var humidityFourDisplay =  "Humidity: " + datab['daily']['3']['humidity'] +"%";
+    humidityFour.innerText = humidityFourDisplay;
+    var humidityFiveDisplay =  "Humidity: " + datab['daily']['4']['humidity'] +"%";
+    humidityFive.innerText = humidityFiveDisplay;
+    // Weather Icons for 5 day
+    var imgOne = datab.daily[0].weather[0].icon
+    dayoneIcon.setAttribute("src","http://openweathermap.org/img/w/" + imgOne + ".png");
+    var imgTwo = datab.daily[1].weather[0].icon
+    daytwoIcon.setAttribute("src","http://openweathermap.org/img/w/" + imgTwo + ".png");
+    var imgThree = datab.daily[2].weather[0].icon
+    daythreeIcon.setAttribute("src","http://openweathermap.org/img/w/" + imgThree + ".png");
+    var imgFour = datab.daily[3].weather[0].icon
+    dayfourIcon.setAttribute("src","http://openweathermap.org/img/w/" + imgFour + ".png");
+    var imgFive = datab.daily[4].weather[0].icon
+    dayfiveIcon.setAttribute("src","http://openweathermap.org/img/w/" + imgFive + ".png");
+ }
+
+
+
+
 
 var loadCities = function() {
 
