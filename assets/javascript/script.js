@@ -1,3 +1,4 @@
+var uvChange = document.querySelector('#uvchange')
 var searchButton = document.getElementById("searchButton");
 var cityinput = document.querySelector("#city-search");
 // Current City Display Variables
@@ -72,7 +73,7 @@ var currentDisplay = function(data) {
     humidity.innerText = humidityDisplay; 
     var temperatureDisplay = "Temperature: " + data['main']['temp']+"°F";
     temperature.innerText = temperatureDisplay;
-    var windSpeedDisplay = "Wind Speed: " + data['wind']['speed']+"mph";
+    var windSpeedDisplay = "Wind Speed: " + data['wind']['speed']+" mph";
     windSpeed.innerText = windSpeedDisplay; 
     var imageCode = data.weather[0].icon;
     weatherIcon.setAttribute("src","http://openweathermap.org/img/w/" + imageCode + ".png")
@@ -81,8 +82,6 @@ var currentDisplay = function(data) {
     var lat = data.coord.lat;
 
     uvi(lon, lat);
-
-    
 };
 
 var uvi = function(lon, lat) {
@@ -95,15 +94,13 @@ var uvi = function(lon, lat) {
         uvIndex.innerText = "UV Index: " +uvidisplay;
         setFiveDay(datab);
         showFiveDay(datab);
-
+        uviColor(datab);
     });
     }else {
         console.log("error retrieving");
     };
         });
 }; 
-
-
 
  var setFiveDay = function(datab){ 
     dateonearea = document.getElementById("date1");
@@ -170,9 +167,45 @@ var uvi = function(lon, lat) {
     var imgFive = datab.daily[4].weather[0].icon
     dayfiveIcon.setAttribute("src","http://openweathermap.org/img/w/" + imgFive + ".png");
  }
+// changes color on uvi 
+ var uviColor = function (datab) {
 
-
-
+    if (datab['current']['uvi'] <3) {
+        uvChange.classList.remove('veryhigh-red');
+        uvChange.classList.remove('high-orange');
+        uvChange.classList.remove('extreme-purple');
+        uvChange.classList.remove('moderate-yellow');
+        uvChange.classList.add('lowgreen');
+    }
+    if (datab['current']['uvi'] > 2 && datab['current']['uvi'] < 6) {
+        uvChange.classList.remove('high-orange');
+        uvChange.classList.remove('extreme-purple');
+        uvChange.classList.remove('lowgreen');
+        uvChange.classList.remove('veryhigh-red');
+        uvChange.classList.add('moderate-yellow');
+    }
+    if (datab['current']['uvi'] > 5 && datab['current']['uvi'] < 8) {
+        uvChange.classList.remove('extreme-purple');
+        uvChange.classList.remove('lowgreen');
+        uvChange.classList.remove('veryhigh-red');
+        uvChange.classList.remove('moderate-yellow');
+        uvChange.classList.add('high-orange');
+    }
+    if (datab['current']['uvi'] > 7 && datab['current']['uvi'] < 11) {
+        uvChange.classList.remove('extreme-purple');
+        uvChange.classList.remove('lowgreen');
+        uvChange.classList.remove('moderate-yellow');
+        uvChange.classList.remove('high-orange');
+        uvChange.classList.add('veryhigh-red');
+    }
+    if (datab['current']['uvi'] > 10) {
+        uvChange.classList.remove('lowgreen');
+        uvChange.classList.remove('moderate-yellow');
+        uvChange.classList.remove('high-orange');
+        uvChange.classList.remove('veryhigh-red');
+        uvChange.classList.add('extreme-purple');
+    }
+ };
 
 
 var loadCities = function() {

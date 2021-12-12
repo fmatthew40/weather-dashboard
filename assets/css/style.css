@@ -1,9 +1,15 @@
-.change-green {
+.lowgreen {
     background-color: rgb(114, 206, 114);
 }
-.change-yellow {
+.moderate-yellow {
     background-color: rgb(192, 219, 117);
 }
-.change-red {
+.high-orange {
     background-color: rgb(230, 129, 82);
+}
+.veryhigh-red {
+    background-color: rgb(230, 94, 82);
+}
+.extreme-purple {
+    background-color: rgb(95, 55, 238);
 }
